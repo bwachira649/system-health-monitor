@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "system-health-monitor"
+version = "0.1.0"
+description = "Professional cross-platform system health and performance monitoring tool."
+requires-python = ">=3.11"
+dependencies = [
+    "psutil==7.2.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.0.2"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
